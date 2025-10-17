@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+.pc-container {
+    width: 100vw; /* full-screen ngang */
+    height: 500px; /* chỉnh cao theo ý bạn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f6f6; /* nền để thấy rõ */
+    overflow: hidden;
+}
+
+/* The small card that holds the images (the "viewport" for images) */
+.pc-card {
+    width: 640px; /* kích thước nhỏ hơn container */
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    cursor: grab;
+}
+
+/* image layers inside card (absolute so they can move) */
+.pc-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%; /* hơi lớn để khi dịch chuyển vẫn che kín */
+    height: auto;
+    min-height: 100%;
+    transform: translate(-50%, -50%); /* center each image */
+    object-fit: cover;
+    pointer-events: none; /* không cản event chuột */
+    will-change: transform;
+}
+
+/* Optional title overlay */
+.pc-title {
+    position: absolute;
+    left: 12%;
+    top: 12%;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 28px;
+    color: rgba(20, 20, 20, 0.85);
+    pointer-events: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.perspective {
+    perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
