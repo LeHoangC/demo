@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
+import BorderRevealEffect from './BorderRevealEffect'
 
 export default function ImageParallaxMouse() {
     const containerRef = useRef(null)
@@ -82,7 +83,7 @@ export default function ImageParallaxMouse() {
         <div className="bg-[#ffffe3] flex items-center justify-center p-8">
             <div
                 ref={containerRef}
-                className="relative w-[60vw] h-[90vh] bg-[ffffe3] rounded-2xl overflow-hidden cursor-none border border-stone-200/10"
+                className="relative w-full max-w-[1440px] bg-[ffffe3] rounded-2xl overflow-hidden cursor-none border border-stone-200/10"
             >
                 <div
                     ref={layer3Ref}
@@ -126,51 +127,52 @@ export default function ImageParallaxMouse() {
                     </div>
                 </div>
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 pointer-events-none">
-                    <div class=" mx-auto">
-                        <p class="uppercase tracking-widest mb-3 text-3xl">Every Detail Matters</p>
-                        <h1 class="text-5xl md:text-9xl font-extrabold leading-tight text-[#10100e] uppercase">
-                            We approach
-                            <br />
-                            Every Project
-                            <br />
-                            With:
+                <div className="inset-0 flex flex-col items-center justify-center text-center p-8 pointer-events-none">
+                    <div className=" mx-auto">
+                        <p className="uppercase tracking-widest mb-3 text-2xl md:text-3xl">Every Detail Matters</p>
+                        <h1 className="text-3xl sm:text-5xl sm:max-w-4xl xl:max-w-6xl xl:text-[140px] font-extrabold leading-tight text-[#10100e] uppercase">
+                            We approach Every Project With:
                         </h1>
                     </div>
 
-                    <div class="border-b border-black w-full max-w-6xl mx-auto my-12"></div>
+                    <BorderRevealEffect borderColor="black" direction="left" duration={1} />
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto my-12">
                         <div>
-                            <h2 class="text-3xl font-bold mb-3">01</h2>
-                            <h3 class="uppercase font-semibold mb-2">Restraint</h3>
-                            <p class="text-sm leading-relaxed text-gray-700">
+                            <h2 className="text-3xl xl:text-6xl font-bold mb-3">01</h2>
+                            <h3 className="uppercase font-semibold mb-2 text:3xl xl:text-4xl">Restraint</h3>
+                            <p className="text-xl leading-relaxed text-gray-700">
                                 We favor clarity over clutter. Every decision is intentional, guided by the narrative,
                                 not noise.
                             </p>
                         </div>
 
                         <div>
-                            <h2 class="text-3xl font-bold mb-3">02</h2>
-                            <h3 class="uppercase font-semibold mb-2">Precision</h3>
-                            <p class="text-sm leading-relaxed text-gray-700">
+                            <h2 className="text-3xl xl:text-6xl font-bold mb-3">02</h2>
+                            <h3 className="uppercase font-semibold mb-2 text:3xl xl:text-4xl">Precision</h3>
+                            <p className="text-xl leading-relaxed text-gray-700">
                                 Details are everything. From framing to finish, we execute with care and control to
                                 serve the story.
                             </p>
                         </div>
 
                         <div>
-                            <h2 class="text-3xl font-bold mb-3">03</h2>
-                            <h3 class="uppercase font-semibold mb-2">Emotion</h3>
-                            <p class="text-sm leading-relaxed text-gray-700">
+                            <h2 className="text-3xl xl:text-6xl font-bold mb-3">03</h2>
+                            <h3 className="uppercase font-semibold mb-2 text:3xl xl:text-4xl">Emotion</h3>
+                            <p className="text-xl leading-relaxed text-gray-700">
                                 We aim to move. Every element is shaped to stir feeling and forge connection through
                                 atmosphere.
                             </p>
                         </div>
                     </div>
 
-                    <div class="border-b border-black w-full max-w-6xl mx-auto my-12"></div>
+                    <BorderRevealEffect borderColor="black" direction="left" duration={1} />
                 </div>
+                <button className="group top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative py-3 bg-transparent text-base font-semibold cursor-pointer text-black overflow-hidden">
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">|</span>
+                    <span className="mx-2 tracking-widest">BOOK A CALL</span>
+                    <span className="inline-block transition-transform duration-300 group-hover:-translate-x-1">|</span>
+                </button>
             </div>
         </div>
     )

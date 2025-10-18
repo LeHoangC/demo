@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import BorderReveal from './BorderRevealEffect'
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ export default function ContactForm() {
 
     return (
         <div className="min-h-[60vh] bg-[#e9e92f] flex items-center justify-center p-8">
-            <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div className="w-full max-w-[1440px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
                 {/* Left Section */}
                 <div className="flex flex-col justify-center">
                     <p className="text-sm font-semibold tracking-wider mb-4 text-gray-800">CONTACT US</p>
@@ -33,8 +34,14 @@ export default function ContactForm() {
                         CONVERSATION
                     </h1>
                     <p className="text-lg mb-8 text-gray-800">Reach out — let's build something enduring.</p>
-                    <button className="self-start border-2 border-gray-900 px-8 py-3 font-semibold hover:bg-gray-900 hover:text-yellow-300 transition-colors duration-300">
-                        BOOK A CALL
+                    <button className="group self-start relative py-3 bg-transparent text-base font-semibold cursor-pointer text-black overflow-hidden">
+                        <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                            |
+                        </span>
+                        <span className="mx-2 tracking-wider">BOOK A CALL</span>
+                        <span className="inline-block transition-transform duration-300 group-hover:-translate-x-1">
+                            |
+                        </span>
                     </button>
                 </div>
 
@@ -42,21 +49,22 @@ export default function ContactForm() {
                 <div className="flex flex-col justify-center">
                     <div className="space-y-8">
                         {/* Name Field */}
-                        <div className="border-b-2 border-gray-900 pb-2">
+                        <div className="pb-2">
                             <label className="block text-xs font-semibold tracking-wider mb-2 text-gray-800">
                                 NAME *
                             </label>
                             <input
                                 type="text"
-                                placeholder="Full Name"
+                                placeholder="Full"
                                 value={formData.name}
                                 onChange={(e) => handleChange('name', e.target.value)}
                                 className="w-full bg-transparent outline-none text-gray-900 placeholder-gray-600 text-lg"
                             />
+                            <BorderReveal className="mt-1" borderColor="black" direction="left" />
                         </div>
 
                         {/* Email Field */}
-                        <div className="border-b-2 border-gray-900 pb-2">
+                        <div className="pb-2">
                             <label className="block text-xs font-semibold tracking-wider mb-2 text-gray-800">
                                 EMAIL *
                             </label>
@@ -67,10 +75,11 @@ export default function ContactForm() {
                                 onChange={(e) => handleChange('email', e.target.value)}
                                 className="w-full bg-transparent outline-none text-gray-900 placeholder-gray-600 text-lg"
                             />
+                            <BorderReveal className="mt-1" borderColor="black" direction="left" />
                         </div>
 
                         {/* Inquiry Type Field */}
-                        <div className="border-b-2 border-gray-900 pb-2">
+                        <div className="pb-2">
                             <label className="block text-xs font-semibold tracking-wider mb-2 text-gray-800">
                                 INQUIRY TYPE *
                             </label>
@@ -85,10 +94,11 @@ export default function ContactForm() {
                                 <option value="support">Support</option>
                                 <option value="partnership">Partnership</option>
                             </select>
+                            <BorderReveal className="mt-1" borderColor="black" direction="left" />
                         </div>
 
                         {/* Message Field */}
-                        <div className="border-b-2 border-gray-900 pb-2">
+                        <div className="pb-2">
                             <label className="block text-xs font-semibold tracking-wider mb-2 text-gray-800">
                                 MESSAGE *
                             </label>
@@ -99,6 +109,7 @@ export default function ContactForm() {
                                 rows="1"
                                 className="w-full bg-transparent outline-none text-gray-900 placeholder-gray-600 text-lg resize-none"
                             />
+                            <BorderReveal className="mt-1" borderColor="black" direction="left" />
                         </div>
 
                         {/* Submit Button */}

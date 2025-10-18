@@ -114,7 +114,7 @@ const StoryMeetsCraftGSAP = () => {
                             <img
                                 src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
                                 alt="Creative work 1"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-2xl"
                                 style={{
                                     filter: 'sepia(0.3) saturate(1.3) hue-rotate(-10deg) brightness(1.1)',
                                 }}
@@ -126,7 +126,7 @@ const StoryMeetsCraftGSAP = () => {
                             <img
                                 src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80"
                                 alt="Creative work 2"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-2xl"
                             />
                         </div>
 
@@ -135,7 +135,7 @@ const StoryMeetsCraftGSAP = () => {
                             <img
                                 src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80"
                                 alt="Creative work 3"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-2xl"
                                 style={{
                                     filter: 'sepia(0.2) saturate(1.2) hue-rotate(160deg) brightness(0.9)',
                                 }}

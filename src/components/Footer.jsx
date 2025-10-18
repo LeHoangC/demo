@@ -1,11 +1,13 @@
 import { Instagram, Twitter } from 'lucide-react'
+import BorderRevealEffect from './BorderRevealEffect'
+import FramehausZoomEffect from './ParallaxText'
 
 export default function Footer() {
     return (
         <footer className="bg-black text-white">
-            <div className="max-w-7xl mx-auto px-8">
+            <div className="max-w-[1440px] mx-auto px-8">
                 {/* Top Section */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-12 border-b border-gray-800">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-12">
                     {/* Logo */}
                     <div className="mb-8 md:mb-0">
                         <h2 className="text-5xl font-bold tracking-tight">FH</h2>
@@ -33,6 +35,16 @@ export default function Footer() {
                         </a>
                     </nav>
                 </div>
+                {/* <div className="h-64 w-64 [transform:perspective(500px)_rotateX(45deg)]">
+                    <img
+                        src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+                        alt="Creative work 1"
+                        className="w-full h-full object-cover rounded-2xl"
+                        style={{}}
+                    />
+                </div> */}
+
+                <BorderRevealEffect />
 
                 {/* Bottom Section */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-8">
@@ -100,47 +112,10 @@ export default function Footer() {
                         </a>
                     </div>
                 </div>
+                <BorderRevealEffect />
             </div>
 
-            <div className="relative max-w-[1440px] mx-auto h-40 overflow-hidden bg-black">
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div
-                        className="absolute text-center pointer-events-none will-change-transform overflow-hidden"
-                        style={{
-                            transform: 'translate3d(0px, -26%, 0px) scale3d(0.8, 0.8, 1)',
-                            transformStyle: 'preserve-3d',
-                            clipPath: 'inset(0 0 70% 0)',
-                        }}
-                    >
-                        <div className="text-[6vw] font-bold leading-[0.85] tracking-tight text-[#ffffe3]">
-                            FRAMEHAUS
-                        </div>
-                    </div>
-
-                    <div
-                        className="absolute text-center pointer-events-none will-change-transform overflow-hidden"
-                        style={{
-                            transform: 'translate3d(0px, 0px, 0px) scale3d(0.9, 0.9, 1)',
-                            transformStyle: 'preserve-3d',
-                            clipPath: 'inset(0 0 70% 0)',
-                        }}
-                    >
-                        <div className="text-[6vw] font-bold leading-[0.85] tracking-tight text-[#ffffe3]">
-                            FRAMEHAUS
-                        </div>
-                    </div>
-
-                    <div
-                        className="absolute text-center z-10 will-change-transform"
-                        style={{
-                            transform: 'translate3d(0px, 30px, 0px) scale3d(1, 1, 1)',
-                            transformStyle: 'preserve-3d',
-                        }}
-                    >
-                        <h1 className="text-[6vw] font-bold leading-[0.85] tracking-tight text-[#ffffe3]">FRAMEHAUS</h1>
-                    </div>
-                </div>
-            </div>
+            <FramehausZoomEffect />
         </footer>
     )
 }

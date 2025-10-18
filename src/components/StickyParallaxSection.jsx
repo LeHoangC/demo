@@ -1,17 +1,18 @@
 import React from 'react'
+import BorderReveal from './BorderRevealEffect'
 
 export default function StickyParallaxSection() {
     const images = [
         {
             url: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80',
             alt: 'Person with guitar',
-            className: 'top-[calc(100vh-320px)] left-[15%]', // Hiển thị full từ đầu
+            className: 'top-[calc(100vh-320px)] left-[25%]', // Hiển thị full từ đầu
             size: 'w-64 h-80 md:w-72 md:h-96',
         },
         {
             url: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80',
             alt: 'Person outdoor',
-            className: 'top-[calc(100vh-105px)] right-[12%]', // Hiển thị 3/4 từ đầu (105px = 420px * 1/4)
+            className: 'top-[calc(100vh-105px)] right-[20%]', // Hiển thị 3/4 từ đầu (105px = 420px * 1/4)
             size: 'w-72 h-96 md:w-80 md:h-[420px]',
         },
         {
@@ -27,7 +28,7 @@ export default function StickyParallaxSection() {
             <div className="relative h-[240vh]">
                 <div className="sticky top-0 h-screen bg-[#f4e04d] flex items-center justify-center overflow-hidden">
                     <div className="text-center z-10 max-w-4xl px-5">
-                        <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-black leading-tight">
+                        <h2 className="text-5xl md:text-7xl lg:text-9xl font-black text-black leading-tight">
                             FOR THOSE
                             <br />
                             WHO SEE IN
@@ -58,8 +59,14 @@ export default function StickyParallaxSection() {
                                 CONVERSATION
                             </h2>
                             <p className="text-lg mb-8 text-black">Reach out — let's build something enduring.</p>
-                            <button className="py-3 bg-transparent border-0 border-b-2 border-black text-base font-semibold cursor-pointer text-black hover:opacity-70 transition-opacity">
-                                | BOOK A CALL |
+                            <button className="group relative py-3 bg-transparent text-base font-semibold cursor-pointer text-black overflow-hidden">
+                                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                                    |
+                                </span>
+                                <span className="mx-2 tracking-widest">BOOK A CALL</span>
+                                <span className="inline-block transition-transform duration-300 group-hover:-translate-x-1">
+                                    |
+                                </span>
                             </button>
                         </div>
 
@@ -72,8 +79,9 @@ export default function StickyParallaxSection() {
                                     <input
                                         type="text"
                                         placeholder="Full Name"
-                                        className="w-full py-3 border-0 border-b border-black bg-transparent text-base outline-none text-black placeholder-black/50"
+                                        className="w-full py-3 bg-transparent text-base outline-none text-black placeholder-black/50"
                                     />
+                                    <BorderReveal borderColor="black" direction="left" />
                                 </div>
 
                                 <div>
@@ -83,20 +91,22 @@ export default function StickyParallaxSection() {
                                     <input
                                         type="email"
                                         placeholder="Email"
-                                        className="w-full py-3 border-0 border-b border-black bg-transparent text-base outline-none text-black placeholder-black/50"
+                                        className="w-full py-3 bg-transparent text-base outline-none text-black placeholder-black/50"
                                     />
+                                    <BorderReveal borderColor="black" direction="left" />
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-semibold tracking-wider mb-2 text-black">
                                         INQUIRY TYPE *
                                     </label>
-                                    <select className="w-full py-3 border-0 border-b border-black bg-transparent text-base outline-none cursor-pointer text-black">
+                                    <select className="w-full py-3 bg-transparent text-base outline-none cursor-pointer text-black">
                                         <option>Select one...</option>
                                         <option>Video Production</option>
                                         <option>Photography</option>
                                         <option>Other</option>
                                     </select>
+                                    <BorderReveal borderColor="black" direction="left" />
                                 </div>
 
                                 <div>
@@ -106,8 +116,9 @@ export default function StickyParallaxSection() {
                                     <textarea
                                         placeholder="Leave us a note"
                                         rows="4"
-                                        className="w-full py-3 border-0 border-b border-black bg-transparent text-base outline-none resize-y text-black placeholder-black/50"
+                                        className="w-full py-3 bg-transparent text-base outline-none resize-y text-black placeholder-black/50"
                                     />
+                                    <BorderReveal borderColor="black" direction="left" />
                                 </div>
 
                                 <button

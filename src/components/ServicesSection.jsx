@@ -72,11 +72,11 @@ export default function ServicesSection() {
             <div className="max-w-6xl mx-auto space-y-20">
                 {services.map((service, i) => (
                     <div key={service.id} className="group">
-                        <div class="border-b border-white w-full max-w-6xl mx-auto"></div>
+                        <div className="border-b border-white w-full max-w-6xl mx-auto"></div>
                         <div className="grid md:grid-cols-12 items-center">
                             {/* Image with Flip Effect */}
                             <div className="relative col-span-4 perspective w-full h-80 flex justify-center items-center">
-                                <div className="absolute -top-4 w-72 h-72 transition-all duration-500 transform-style-preserve-3d -rotate-x-70 -rotate-z-30 -rotate-y-10 opacity-0 group-hover:rotate-x-0 group-hover:-rotate-y-0 group-hover:rotate-z-0 group-hover:opacity-100">
+                                <div className="absolute -top-4 w-72 h-72 transition-all duration-500 transform-style-preserve-3d -rotate-x-50 -rotate-z-16 -rotate-y-20 opacity-0 group-hover:rotate-x-0 group-hover:-rotate-y-0 group-hover:rotate-z-0 group-hover:opacity-100">
                                     <img
                                         src={service.img}
                                         alt={service.title}
@@ -86,7 +86,7 @@ export default function ServicesSection() {
                             </div>
 
                             {/* Text Content */}
-                            <p className="col-span-2 text-sm text-center tracking-widest mb-3">{service.id}</p>
+                            <p className="col-span-2 text-2xl text-center tracking-widest mb-3">{service.id}</p>
                             <div className="col-span-6">
                                 <h3 className="text-2xl md:text-3xl font-semibold mb-5">{service.title}</h3>
                                 <div className="space-y-4">

@@ -18,7 +18,7 @@ function App() {
             <ParallaxImages />
             <ServicesSection />
             <StickyParallaxSection />
-            <div className="relative z-10 mt-[20vh]">
+            <div className="mt-[120vh] 2xl:mt-[50vh]">
                 <PartnersSection />
             </div>
             <HeroSection />
