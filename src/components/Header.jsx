@@ -58,7 +58,7 @@ const Header = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#service" className="hover:opacity-60 transition-opacity duration-300">
+                        <a href="#service" className="text-yellow-300 hover:opacity-60 transition-opacity duration-300">
                             Service
                         </a>
                     </li>

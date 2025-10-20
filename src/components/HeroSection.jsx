@@ -92,9 +92,14 @@ const StoryMeetsCraftGSAP = () => {
                             the same belief: every detail matters.
                         </p>
 
-                        <button className="group flex items-center gap-3 text-white border-l-4 border-orange-500 pl-6 py-2 text-lg font-medium hover:border-orange-400 transition-colors duration-300">
-                            VIEW OUR WORK
-                            <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
+                        <button className="group self-start relative py-3 bg-transparent text-base font-semibold cursor-pointer text-white overflow-hidden">
+                            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                                |
+                            </span>
+                            <span className="mx-2 tracking-widest">VIEW OUR WORK</span>
+                            <span className="inline-block transition-transform duration-300 group-hover:-translate-x-1">
+                                |
+                            </span>
                         </button>
                     </div>
 

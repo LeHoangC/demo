@@ -17,10 +17,10 @@ function App() {
             <Hero />
             <ParallaxImages />
             <ServicesSection />
-            <StickyParallaxSection />
-            <div className="mt-[120vh] 2xl:mt-[50vh]">
-                <PartnersSection />
-            </div>
+            {/* <StickyParallaxSection /> */}
+            {/* <div className="mt-[120vh] 2xl:mt-[50vh]"> */}
+            <PartnersSection />
+            {/* </div> */}
             <HeroSection />
             <ContactForm />
             <Footer />

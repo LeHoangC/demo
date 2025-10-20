@@ -60,7 +60,7 @@ const WhatWeShape = () => {
     return (
         <div
             ref={containerRef}
-            className="relative max-w-[1440px] mx-auto h-[20vh] md:h-[60vh] overflow-hidden bg-black mt-12 flex items-center justify-center"
+            className="relative max-w-[1440px] mx-auto h-[20vh] md:h-screen overflow-hidden bg-black mt-12 flex items-center justify-center"
         >
             <div
                 ref={layer3}
@@ -71,7 +71,7 @@ const WhatWeShape = () => {
                     clipPath: 'inset(92% 0 0 0)',
                 }}
             >
-                <div className="text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[4vw] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
+                <div className="text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[10vw] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
                     WHAT WE
                     <br />
                     SHAPE
@@ -87,7 +87,7 @@ const WhatWeShape = () => {
                     clipPath: 'inset(92% 0 0 0)',
                 }}
             >
-                <div className="text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[4vw] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
+                <div className="text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[10vw] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
                     WHAT WE
                     <br />
                     SHAPE
@@ -102,7 +102,7 @@ const WhatWeShape = () => {
                     transformStyle: 'preserve-3d',
                 }}
             >
-                <h1 className="text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[4vw] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
+                <h1 className="text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[10vw] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
                     WHAT WE
                     <br />
                     SHAPE
