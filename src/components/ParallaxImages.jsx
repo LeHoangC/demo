@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import BorderRevealEffect from './BorderRevealEffect'
 
-export default function ImageParallaxMouse() {
+export default function ParallaxImages() {
     const containerRef = useRef(null)
     const layer1Ref = useRef(null)
     const layer2Ref = useRef(null)

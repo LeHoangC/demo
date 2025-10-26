@@ -1,16 +1,16 @@
-import React, { useEffect, useRef } from 'react'
+import { useRef, useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WhatWeShape = () => {
+const Hero = ({ children }) => {
     const layer1 = useRef(null)
     const layer2 = useRef(null)
     const layer3 = useRef(null)
     const containerRef = useRef(null)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         gsap.fromTo(
             containerRef.current,
             { scale: 0.5 },
@@ -60,7 +60,7 @@ const WhatWeShape = () => {
     return (
         <div
             ref={containerRef}
-            className="relative max-w-[1440px] mx-auto h-[20vh] md:h-screen overflow-hidden bg-black mt-12 flex items-center justify-center"
+            className="relative max-w-[1440px] mx-auto h-[30vh] sm:h-[50vh] md:h-screen 2xl:h-[50vh] overflow-hidden bg-black mt-12 flex items-center justify-center"
         >
             <div
                 ref={layer3}
@@ -71,10 +71,8 @@ const WhatWeShape = () => {
                     clipPath: 'inset(92% 0 0 0)',
                 }}
             >
-                <div className="text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[10vw] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
-                    WHAT WE
-                    <br />
-                    SHAPE
+                <div className="text-4xl md:text-[13vw] 2xl:text-[200px] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
+                    {children}
                 </div>
             </div>
 
@@ -87,10 +85,8 @@ const WhatWeShape = () => {
                     clipPath: 'inset(92% 0 0 0)',
                 }}
             >
-                <div className="text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[10vw] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
-                    WHAT WE
-                    <br />
-                    SHAPE
+                <div className="text-4xl md:text-[13vw] 2xl:text-[200px] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
+                    {children}
                 </div>
             </div>
 
@@ -102,14 +98,12 @@ const WhatWeShape = () => {
                     transformStyle: 'preserve-3d',
                 }}
             >
-                <h1 className="text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[10vw] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
-                    WHAT WE
-                    <br />
-                    SHAPE
+                <h1 className="text-4xl md:text-[13vw] 2xl:text-[200px] font-extrabold leading-[0.85] tracking-tight text-[#ffffe3]">
+                    {children}
                 </h1>
             </div>
         </div>
     )
 }
 
-export default WhatWeShape
+export default Hero

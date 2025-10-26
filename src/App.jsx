@@ -1,29 +1,24 @@
 import React from 'react'
-import Hero from './components/Hero'
-import ParallaxImages from './components/ParallaxImages'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
-import ServicesSection from './components/ServicesSection'
-import StickyParallaxSection from './components/StickyParallaxSection'
-import PartnersSection from './components/PartnersSection'
-import HeroSection from './components/HeroSection'
-import ContactForm from './components/ContactForm'
-import Footer from './components/Footer'
+import Home from './pages/Home'
+import Work from './pages/Work'
+import Service from './pages/Service'
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 function App() {
     return (
         <div className="bg-black">
             <Header />
-            <Hero />
-            <ParallaxImages />
-            <ServicesSection />
-            {/* <StickyParallaxSection /> */}
-            {/* <div className="mt-[120vh] 2xl:mt-[50vh]"> */}
-            <PartnersSection />
-            {/* </div> */}
-            <HeroSection />
-            <ContactForm />
-            <Footer />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/work" element={<Work />} />
+                <Route path="/service" element={<Service />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
         </div>
     )
 }

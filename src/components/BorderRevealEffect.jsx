@@ -31,5 +31,10 @@ export default function BorderReveal({ direction = 'center', duration = 0.5, cla
         )
     }, [direction, duration])
 
-    return <div ref={borderRef} className={`border-b border-[1px] border-${borderColor} w-full ${className}`} />
+    return (
+        <div
+            ref={borderRef}
+            className={`border-b border-[1px] border-${borderColor} w-full max-w-[1440px] mx-auto ${className}`}
+        />
+    )
 }

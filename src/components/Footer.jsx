@@ -1,6 +1,7 @@
 import { Instagram, Twitter } from 'lucide-react'
 import BorderRevealEffect from './BorderRevealEffect'
 import FramehausZoomEffect from './ParallaxText'
+import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -15,34 +16,48 @@ export default function Footer() {
 
                     {/* Navigation */}
                     <nav className="flex flex-wrap gap-8 text-sm">
-                        <a href="#work" className="hover:text-yellow-300 transition-colors font-medium tracking-wide">
+                        <NavLink
+                            to="/work"
+                            className={({ isActive }) =>
+                                `hover:text-yellow-300 transition-colors font-medium tracking-wide ${
+                                    isActive ? 'text-yellow-300' : ''
+                                }`
+                            }
+                        >
                             WORK
-                        </a>
-                        <a
-                            href="#services"
-                            className="text-yellow-300 hover:text-yellow-400 transition-colors font-medium tracking-wide"
+                        </NavLink>
+                        <NavLink
+                            to="/service"
+                            className={({ isActive }) =>
+                                `hover:text-yellow-300 transition-colors font-medium tracking-wide ${
+                                    isActive ? 'text-yellow-300' : ''
+                                }`
+                            }
                         >
                             SERVICES
-                        </a>
-                        <a href="#about" className="hover:text-yellow-300 transition-colors font-medium tracking-wide">
+                        </NavLink>
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) =>
+                                `hover:text-yellow-300 transition-colors font-medium tracking-wide ${
+                                    isActive ? 'text-yellow-300' : ''
+                                }`
+                            }
+                        >
                             ABOUT
-                        </a>
-                        <a
-                            href="#contact"
-                            className="hover:text-yellow-300 transition-colors font-medium tracking-wide"
+                        </NavLink>
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive }) =>
+                                `hover:text-yellow-300 transition-colors font-medium tracking-wide ${
+                                    isActive ? 'text-yellow-300' : ''
+                                }`
+                            }
                         >
                             CONTACT
-                        </a>
+                        </NavLink>
                     </nav>
                 </div>
-                {/* <div className="h-64 w-64 [transform:perspective(500px)_rotateX(45deg)]">
-                    <img
-                        src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
-                        alt="Creative work 1"
-                        className="w-full h-full object-cover rounded-2xl"
-                        style={{}}
-                    />
-                </div> */}
 
                 <BorderRevealEffect />
 
